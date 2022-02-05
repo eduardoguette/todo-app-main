@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 import './TodoListItem.scss';
+import cross from '/assets/images/icon-cross.svg'
 
 const variantes = {
   hidden: {
@@ -33,7 +34,7 @@ export const TodoListItem = ({ todo, id, done, index }) => {
       <label htmlFor={id} className={`todo-item__state ${done ? 'done' : ''}`} onClick={() => handleChangeTodo(id)}></label>
       <div className='todo-item-content' onClick={() => handleChangeTodo(id)}>{todo}</div>
       <motion.button whileTap={{scale:0.9}} whileHover={{scale:1.5}} className='todo-item__delete' onClick={() => handleDelete(id)}>
-        <img src='/assets/images/icon-cross.svg' alt='Delete todo' height={16} width={16} />
+        <img src={cross} alt='Delete todo' height={16} width={16} />
       </motion.button>
     </motion.article>
   );

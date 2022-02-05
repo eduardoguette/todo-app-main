@@ -85,10 +85,15 @@ picture {
   }
   img {
     width: 100%;
+    @media (min-width: 1200px) {
+      height: 200px;
+      object-fit: cover;
+    }
   }
 }
 .layout {
   padding: 0 1.5rem;
+  position: relative;
   
 }
 .App{
