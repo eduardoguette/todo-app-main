@@ -1,5 +1,4 @@
-import React from 'react';
-import { useContext, useEffect } from 'react/cjs/react.development';
+import { useContext, useEffect } from 'react';
 import moon from '/assets/images/icon-moon.svg';
 import sun from '/assets/images/icon-sun.svg';
 
@@ -15,7 +14,7 @@ export const ToggleDarkMode = () => {
   }, []);
 
   const handleClickDarkMode = () => {
-    setDarkMode(!darkMode)
+    setDarkMode(!darkMode);
   };
   return (
     <button className='dark-mode' onClick={handleClickDarkMode}>
