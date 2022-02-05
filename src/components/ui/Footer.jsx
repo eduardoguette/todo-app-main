@@ -1,5 +1,6 @@
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useContext } from 'react/cjs/react.development';
+ 
 import { UserContext } from '../../context/UserContext';
 import './Footer.scss';
 export const Footer = () => {
