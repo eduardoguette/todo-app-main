@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  src: url(/assets/fonts/JosefinSans-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  src: url(/assets/fonts/JosefinSans-Bold.ttf);
+  font-display: swap;
+}
+
+:root {
+ 
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  font-size: 18px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --heroNight: 0;
+    --heroLight: 1;
+    --bg-secundary: hsl(0, 0%, 98%);
+    --bg-primary: hsl(236, 33%, 92%);
+    --text-color: hsl(235, 19%, 35%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --heroNight: 1;
+    --heroLight: 0;
+    --bg-primary: hsl(235, 21%, 11%);
+    --bg-secundary: hsl(235, 24%, 19%);
+    --text-color: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  }
+}
+.App {
+  --heroNight: 0;
+  --heroLight: 1;
+  --bg-secundary: hsl(0, 0%, 98%);
+  --bg-primary: hsl(236, 33%, 92%);
+  --text-color: hsl(235, 19%, 35%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  &.dark-mode {
+    --heroNight: 1;
+    --heroLight: 0;
+    --bg-primary: hsl(235, 21%, 11%);
+    --bg-secundary: hsl(235, 24%, 19%);
+    --text-color: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans';
+}
+
+html {
+  font-family: 'Josefin Sans';
+}
+ 
+picture {
+  position: absolute; 
+  width: 100%;
+  &.night {
+    opacity: var(--heroNight);
+  }
+  &.day {
+    opacity: var(--heroLight);
+  }
+  img {
+    width: 100%;
+  }
+}
+.layout {
+  padding: 0 1.5rem;
+  
+}
+.App{
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+main {
+  width: min(640px, 100%);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}

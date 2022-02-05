@@ -1,0 +1,28 @@
+.header {
+  position: relative;
+  z-index: 1;
+  &__layout {
+    width: min(640px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0 2rem;
+    margin: auto;
+    input {
+      display: none;
+    }
+    label input ~ .sun {
+      display: none;
+    }
+    label input:checked ~ .moon {
+      display: none;
+    }
+    label input:checked ~ .sun {
+      display: block;
+    }
+  }
+  &__title {
+    letter-spacing: 18px;
+    color: white;
+  }
+}

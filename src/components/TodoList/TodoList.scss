@@ -1,0 +1,12 @@
+.todo-list{ 
+  width: min(640px, 100%);
+  border-radius: .25rem;
+  overflow: hidden;
+  &__wrapper{
+    display: flex;
+    flex-direction: column; 
+    background: var(--bg-secundary);
+    border-radius: .25rem;
+    overflow: hidden;
+  }
+} 
