@@ -30,9 +30,11 @@ export const TodoListItem = ({ todo, id, done, index }) => {
       animate='visible' 
       exit='hidden' 
       variants={variantes} 
-      layoutId={id}>
+      layoutId={id}
+
+      >
       <label htmlFor={id} className={`todo-item__state ${done ? 'done' : ''}`} onClick={() => handleChangeTodo(id)}></label>
-      <div className='todo-item-content' onClick={() => handleChangeTodo(id)}>{todo}</div>
+      <div className='todo-item-content'>{todo}</div>
       <motion.button whileTap={{scale:0.9}} whileHover={{scale:1.5}} className='todo-item__delete' onClick={() => handleDelete(id)}>
         <img src={cross} alt='Delete todo' height={16} width={16} />
       </motion.button>

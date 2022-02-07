@@ -8,17 +8,11 @@ export const Header = () => {
   return (
     <header className='header'>
       <div className='header__layout'>
-        <motion.h1
-          className='header__title'
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            delay: 0.2,
-          }}
+        <h1
+          className='header__title' 
         >
           TODO
-        </motion.h1>
+        </h1>
 
         <ToggleDarkMode/>
       </div>
