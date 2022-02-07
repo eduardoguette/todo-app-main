@@ -7,7 +7,8 @@
   border-bottom: 1.5px solid var(--bg-primary);
   position: relative;
   z-index: 2;
-  color: var(--text-color); 
+  color: var(--text-color);
+
 
   label {
     border: 2.4px solid var(--Dark-Grayish-Blue);
@@ -62,8 +63,8 @@
 ul {
   list-style: none;
 }
-.todo-list.no-move{
-  .todo-item{
+.todo-list.no-move {
+  .todo-item {
     cursor: initial;
   }
 }

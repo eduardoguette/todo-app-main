@@ -1,6 +1,17 @@
 .todo-list{ 
   width: min(640px, 100%);
   border-radius: .25rem; 
+  li:first-child {
+    border-radius: 0.25rem 0.25rem 0 0;
+    overflow: hidden;
+  }
+  @media (min-width: 640px) {
+    
+    li:last-child {
+      border-radius: 0 0 0.4rem 0.4rem;
+      overflow: hidden;
+    }
+  }
   &__wrapper{
     display: flex;
     flex-direction: column; 

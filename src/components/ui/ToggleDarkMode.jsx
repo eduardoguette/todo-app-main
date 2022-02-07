@@ -11,10 +11,12 @@ export const ToggleDarkMode = () => {
 
   const prefresDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
   useEffect(() => {
-    if (!JSON.parse(localStorage.getItem('dark-mode'))) localStorage.setItem('dark-mode', prefresDarkScheme.matches);
+    if (JSON.parse(localStorage.getItem('dark-mode'))) 
+    localStorage.setItem('dark-mode', prefresDarkScheme.matches);
   }, []);
 
   const handleClickDarkMode = () => {
+    localStorage.setItem('dark-mode', !darkMode)
     setDarkMode(!darkMode);
   };
   return (
