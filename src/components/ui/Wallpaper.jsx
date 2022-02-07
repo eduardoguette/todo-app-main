@@ -8,11 +8,11 @@ import mobileNightImg from "/assets/images/bg-mobile-dark.jpg"
 export const Wallpaper = () => {
   return (
     <>
-      <picture className='night'>
+      <picture className='night' role="Wallpaper nocturno">
         <source media='(min-width: 640px)' srcSet={desktopNightImg} />
         <img src={mobileNightImg} alt='Hero image' />
       </picture>
-      <picture className='day'>
+      <picture className='day' role="Wallpeper de día">
         <source media='(min-width: 640px)' srcSet={desktopDayImg} />
         <img src={mobileDayImg} alt='Hero image' />
       </picture>
