@@ -3,15 +3,12 @@
   width: min(640px, 100%);
   margin: auto;
   margin-bottom: 1rem;
-  &__layout {
-    border-radius: 0.25rem;
-    background: var(--bg-secundary);
-    padding: 0 1rem;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    width: min(500px, 100%);
-  }
+  border-radius: 0.25rem;
+  background: var(--bg-secundary);
+  padding: 0 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center; 
   &__state {
     position: relative;
     border: 2.5px solid var(--Dark-Grayish-Blue);

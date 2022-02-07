@@ -17,14 +17,12 @@ export const AddTodo = ({ handleAddTodo }) => {
     reset()
   };
   return (
-    <>
-      <article className='todo'>
-        <form onSubmit={handleSubmit} className='todo__layout'>
+    <> 
+        <form onSubmit={handleSubmit} className='todo'>
           <input ref={check} type='checkbox' name='check-todo' id='check' role="New Todo" />
           <label htmlFor='check' className='todo__state'></label>
           <input value={todo} className='todo__input' onChange={handleInputChange} placeholder='Create a new todo...' type='text' name='todo' id='todo' />
-        </form>
-      </article>
+        </form> 
     </>
   );
 };
